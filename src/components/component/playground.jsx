@@ -197,7 +197,7 @@ const FlappyChicken = () => {
             </div>
             {!gameStarted && (
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white">
-                    <h1 className="text-6xl font-bold mb-8 animate-pulse">Flappy Chicken</h1>
+                    <h1 className="text-6xl font-bold mb-8 animate-pulse text-center justify-center">Flappy Chicken</h1>
                     <p className="text-2xl mb-8">Tap or Press Space Key to Start</p>
                     <div className="text-7xl animate-bounce">🐓</div>
                 </div>
