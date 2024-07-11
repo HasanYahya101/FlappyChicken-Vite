@@ -60,7 +60,7 @@ const FlappyChicken = () => {
 
     const initializePipes = useCallback(() => {
         const initialPipes = [];
-        for (let i = 0; i < 7; i++) {
+        for (let i = 0; i < 20; i++) {
             initialPipes.push(generatePipe(gameSize.width + i * PIPE_SPACING));
         }
         return initialPipes;
@@ -120,7 +120,7 @@ const FlappyChicken = () => {
                         x: pipe.x - PIPE_SPEED,
                     })).filter((pipe) => pipe.x > -PIPE_WIDTH);
 
-                    if (newPipes.length < 7) {
+                    if (newPipes.length < 20) {
                         const lastPipe = newPipes[newPipes.length - 1];
                         newPipes.push(generatePipe(lastPipe.x + PIPE_SPACING));
                     }
@@ -204,13 +204,13 @@ const FlappyChicken = () => {
             )}
             {gameOver && (
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-80 text-white">
-                    <div className="text-6xl mb-8 font-bold">
+                    <div className="text-6xl mb-8 font-bold text-center justify-center">
                         GAME OVER
                     </div>
-                    <div className="text-4xl mb-4">
+                    <div className="text-4xl mb-4 text-center justify-center">
                         Score: {score}
                     </div>
-                    <div className="text-3xl mb-8">
+                    <div className="text-3xl mb-8 text-center justify-center">
                         Title: {getTitle(score)}
                     </div>
                     <Button
