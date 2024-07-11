@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A twist on the classic game flappy bird. This game has tiers from score 1 to 100. The game runs infinitely. When player dies, he is shown his score and title. Game can also be restarted.
+A twist on the classic game flappy bird. This game has tiers from score 1 to 100. The game runs infinitely. When player dies, he is shown his score and title. Game can also be restarted. The game is responsive on both Desktop and Mobile.
 
 ## Deployment
 
