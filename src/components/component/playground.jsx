@@ -169,11 +169,11 @@ const FlappyChicken = () => {
             <div className="absolute inset-0 w-full h-full" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='0.5' d='M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E\")", backgroundRepeat: 'repeat-x', backgroundPosition: 'bottom', backgroundSize: 'contain' }} />
             {pipes.map((pipe, index) => (
                 <React.Fragment key={index}>
-                    <svg className="absolute" style={{ left: pipe.x, top: 0, width: PIPE_WIDTH, height: pipe.height }}>
+                    <svg className="absolute top-0" style={{ left: pipe.x, top: 0, width: PIPE_WIDTH, height: pipe.height }}>
                         <rect width={PIPE_WIDTH} height={pipe.height} fill="url(#pipeGradient)" />
                         <rect width={PIPE_WIDTH} height="20" fill="url(#pipeGradient)" /> {/*#43a047*/}
                     </svg>
-                    <svg className="absolute" style={{ left: pipe.x, top: pipe.height + PIPE_GAP, width: PIPE_WIDTH, height: gameSize.height - pipe.height - PIPE_GAP }}>
+                    <svg className="absolute bottom-0" style={{ left: pipe.x, top: pipe.height + PIPE_GAP, width: PIPE_WIDTH, height: gameSize.height - pipe.height - PIPE_GAP }}>
                         <rect width={PIPE_WIDTH} height={gameSize.height - pipe.height - PIPE_GAP} fill="url(#pipeGradient)" />
                         <rect y={gameSize.height - pipe.height - PIPE_GAP - 20} width={PIPE_WIDTH} height="20" fill="url(#pipeGradient)" /> {/*#43a047*/}
                     </svg>
