@@ -160,7 +160,7 @@ const FlappyChicken = () => {
 
     return (
         <div
-            className="relative overflow-hidden w-screen h-screen"
+            className="relative overflow-hidden w-screen h-screen min-h-screen max-h-screen min-w-screen max-w-screen bg-blue-500"
             onClick={jump}
             style={{
                 background: 'linear-gradient(180deg, #4dc9ff 0%, #74e7ff 100%)',
